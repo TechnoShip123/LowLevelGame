@@ -21,7 +21,9 @@ An opportunity to do more with C++ by creating a game with SDL2. I just love cod
 
 #### Intel
 
-Coming Soon™️, will need to change homebrew path to `/usr/include` and etc.
+Automatic support coming soon™️, will need to change homebrew path to `/usr/include` and etc.
+
+In the meantime, use the same steps as M1 but change the -L and -I paths to `/usr/include`
 
 ### Windows
 
@@ -29,8 +31,34 @@ Coming Soon™️
 
 ### Linux
 
-Coming Soon™️
+#### `apt` Users (e.g. Ubuntu & Debian)
+
+```bash
+# Install build-essential and clang for building, and then libsdl2 dependencies. Make sure to sudo apt update!
+sudo apt install build-essential clang libsdl2-dev libsdl2-image-dev
+```
+
+#### `yum` Users (e.g. Fedora & CentOS)
+
+```bash
+yum install SDL2-devel SDL2_image-devel
+```
+
+#### Randoms without a package manager
+
+Download the source zip from the latest [SDL release](https://github.com/libsdl-org/SDL/releases) and [SDL_image](https://github.com/libsdl-org/SDL_image/releases) release. 
+
+Then extract and build both folders.
+
+```bash
+cd <sdl or sdl_iamge folder>
+# Configure the install
+./configure
+# Compile and install with make
+make all
+make install
+```
 
 ## Having Issues?
 
-~~Sounds like a skill issue to me :)~~ Have fun debugging!
+~~Sounds like a skill issue ;)~~ Have fun debugging!
