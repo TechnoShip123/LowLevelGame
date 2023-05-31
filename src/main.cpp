@@ -20,10 +20,18 @@ int main(int argc, char* args[]) {
     }
     cout << "SDL init successful.\n";
 
-    if (SDL_CreateWindowAndRenderer(SCREEN_WIDTH, SCREEN_HEIGHT, 0, &window, &renderer) != 0) {
-        cout << "Error initializing window and renderer: " << SDL_GetError() << endl; return EXIT_FAILURE;
+    // Create window
+    window = SDL_CreateWindow("LowLevelGame", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
+    if (window == NULL) { 
+        cout << "Error creating window: " << SDL_GetError() << endl; return EXIT_FAILURE; 
     }
     SDL_SetWindowTitle(window, "LowLevelGame");
+
+    // Create renderer
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+    if (renderer == NULL) { 
+        cout << "Error creating renderer: " << SDL_GetError() << endl; return EXIT_FAILURE; 
+    }
     
     cout << "Window and renderer init successful.\n";
     #pragma endregion
