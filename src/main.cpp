@@ -56,6 +56,8 @@ int main(int argc, char* args[]) {
             cout << "LEFT" << endl;
         } else if (keystates[SDL_SCANCODE_RIGHT] || keystates[SDL_SCANCODE_D]) {// RIGHT
             cout << "RIGHT" << endl;
+        } else if (keystates[SDL_SCANCODE_SPACE]) {                             // JUMP
+            cout << "JUMP?" << endl;
         }
 
         // RENDERING STUFF
