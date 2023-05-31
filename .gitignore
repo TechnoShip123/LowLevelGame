@@ -1,3 +1,6 @@
+### CUSTOM ###
+build/
+
 # C++ and VSCode gitignore
 
 ### C++ ###
