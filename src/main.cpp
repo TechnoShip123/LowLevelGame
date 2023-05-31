@@ -32,8 +32,23 @@ int main(int argc, char* args[]) {
     SDL_Event e; bool shouldQuit = false;
     while (shouldQuit == false) {
         #pragma region Event Handling
-        while (SDL_PollEvent(&e)) { 
-            if (e.type == SDL_QUIT) shouldQuit = true;
+        while (SDL_PollEvent(&e)) {
+            // Quit Handling
+            if (e.type == SDL_QUIT) 
+                shouldQuit = true;
+            // Keyboard Input
+            if (e.type == SDL_KEYDOWN) { 
+                SDL_Keycode key = e.key.keysym.sym;
+                if (key == SDLK_UP || key == SDLK_w) {
+                    cout << "UP" << endl;
+                } else if (key == SDLK_DOWN || key == SDLK_s) {
+                    cout << "DOWN" << endl;
+                } else if (key == SDLK_LEFT || key == SDLK_a) {
+                    cout << "LEFT" << endl;
+                } else if (key == SDLK_RIGHT || key == SDLK_d) {
+                    cout << "RIGHT" << endl;
+                }
+            }
         }
         #pragma endregion
 
