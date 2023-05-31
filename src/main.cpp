@@ -41,26 +41,23 @@ int main(int argc, char* args[]) {
     while (shouldQuit == false) {
         #pragma region Event Handling
         while (SDL_PollEvent(&e)) {
-            // Quit Handling
-            if (e.type == SDL_QUIT) 
-                shouldQuit = true;
-            // Keyboard Input
-            if (e.type == SDL_KEYDOWN) { 
-                SDL_Keycode key = e.key.keysym.sym;
-                if (key == SDLK_UP || key == SDLK_w) {
-                    cout << "UP" << endl;
-                } else if (key == SDLK_DOWN || key == SDLK_s) {
-                    cout << "DOWN" << endl;
-                } else if (key == SDLK_LEFT || key == SDLK_a) {
-                    cout << "LEFT" << endl;
-                } else if (key == SDLK_RIGHT || key == SDLK_d) {
-                    cout << "RIGHT" << endl;
-                }
-            }
+            if (e.type == SDL_QUIT) shouldQuit = true;
         }
         #pragma endregion
 
         // TODO: Move game updates to their own Update() function?
+        
+        const Uint8* keystates = SDL_GetKeyboardState(NULL);
+        if (keystates[SDL_SCANCODE_UP] || keystates[SDL_SCANCODE_W]) {          // UP
+            cout << "UP" << endl;
+        } else if (keystates[SDL_SCANCODE_DOWN] || keystates[SDL_SCANCODE_S]) { // DOWN
+            cout << "DOWN" << endl;
+        } else if (keystates[SDL_SCANCODE_LEFT] || keystates[SDL_SCANCODE_A]) { // LEFT
+            cout << "LEFT" << endl;
+        } else if (keystates[SDL_SCANCODE_RIGHT] || keystates[SDL_SCANCODE_D]) {// RIGHT
+            cout << "RIGHT" << endl;
+        }
+
         // RENDERING STUFF
         SDL_SetRenderDrawColor(renderer, 0xFF, 0, 0, 0xFF);
         SDL_RenderClear(renderer);
