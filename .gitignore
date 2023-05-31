@@ -1,5 +1,6 @@
 ### CUSTOM ###
 build/
+.DS_Store
 
 # C++ and VSCode gitignore
 
