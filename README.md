@@ -2,9 +2,9 @@
 
 ## About
 
-An opportunity to do more with C++ by creating a game with SDL2.
+An opportunity to do more with C++ by creating a game with SDL2. I just love coding at a low level XD 
 
-I had fun writing the Makefile :)
+(I have not yet experienced the p̷̜͈̞̻̪͑̀̓͋͝ã̸͓̯̗̲̮͒i̸̥̣̮̠̔̓̀̓͗ṅ̷͙̗̮̹ of writing a physics engine from scratch)
 
 ## Dev Environment
 
@@ -21,7 +21,7 @@ I had fun writing the Makefile :)
 
 #### Intel
 
-Coming Soon™️
+Coming Soon™️, will need to change homebrew path to `/usr/include` and etc.
 
 ### Windows
 
@@ -30,3 +30,7 @@ Coming Soon™️
 ### Linux
 
 Coming Soon™️
+
+## Having Issues?
+
+~~Sounds like a skill issue to me :)~~ Have fun debugging!
