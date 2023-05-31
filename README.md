@@ -34,13 +34,17 @@ Coming Soon™️
 #### `apt` Users (e.g. Ubuntu & Debian)
 
 ```bash
-# Install build-essential and clang for building, and then libsdl2 dependencies. Make sure to sudo apt update!
-sudo apt install build-essential clang libsdl2-dev libsdl2-image-dev
+# Make sure to `sudo apt update` first!
+# Install build-essential and clang if you don't already have clang++ and make
+sudo apt install build-essential clang
+# Install SDL2 dependencies
+sudo apt install libsdl2-dev libsdl2-image-dev
 ```
 
 #### `yum` Users (e.g. Fedora & CentOS)
 
 ```bash
+# Make sure to install build-essential and clang if you don't already have clang++ and make
 yum install SDL2-devel SDL2_image-devel
 ```
 
