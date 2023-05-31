@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: 📦 Install dependencies
+    - name: 📦 Install clang & libsdl2
       run: sudo apt update && sudo apt install clang libsdl2-dev libsdl2-image-dev
       shell: bash
 
