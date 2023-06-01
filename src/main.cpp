@@ -36,6 +36,9 @@ int main(int argc, char* args[]) {
     cout << "Window and renderer init successful.\n";
     #pragma endregion
 
+    const int region1 = SCREEN_WIDTH / 3, region2 = region1 * 2, region3 = SCREEN_WIDTH;
+    cout << "Region 1: " << region1 << " Region 2: " << region2 << " Region 3: " << region3 << endl;
+
     // Keep the window open until the user closes it (we will recieve a close event)
     SDL_Event e; bool shouldQuit = false;
     while (shouldQuit == false) {
@@ -61,8 +64,24 @@ int main(int argc, char* args[]) {
         }
 
         // RENDERING STUFF
-        SDL_SetRenderDrawColor(renderer, 0xFF, 0, 0, 0xFF);
+        SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
         SDL_RenderClear(renderer);
+
+        // slowly draw a line across the screen
+        static int x = 0;
+        // Cycle through RGB colors on each render
+        static int r, g, b = 0;
+        if (x == 0) r = g = b = 0;
+        else if (x < region1) r += r >= 255 ? 0 : 1;
+        else if (x < region2) g += g >= 255 ? 0 : 1;
+        else if (x < region3) b += b >= 255 ? 0 : 1;
+        cout << "r: " << r << " g: " << g << " b: " << b << endl;
+        SDL_SetRenderDrawColor(renderer, r, g, b, 0xFF);
+        // Draw a new line every render.
+        for (int i = 1; i <= x; i++) {
+            SDL_RenderDrawLine(renderer, x-i, 0, x-i, SCREEN_HEIGHT);
+        }
+        x = x > SCREEN_WIDTH ? 0 : x+1;
 
         // Draw
         SDL_RenderPresent(renderer);

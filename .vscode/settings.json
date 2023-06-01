@@ -56,6 +56,22 @@
         "memory_resource": "cpp",
         "utility": "cpp",
         "cinttypes": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "__errc": "cpp",
+        "__hash_table": "cpp",
+        "__locale": "cpp",
+        "__mutex_base": "cpp",
+        "__node_handle": "cpp",
+        "__threading_support": "cpp",
+        "bitset": "cpp",
+        "clocale": "cpp",
+        "ios": "cpp",
+        "locale": "cpp",
+        "mutex": "cpp",
+        "streambuf": "cpp",
+        "system_error": "cpp",
+        "thread": "cpp",
+        "__string": "cpp",
+        "numeric": "cpp"
     }
 }
