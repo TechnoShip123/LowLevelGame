@@ -13,7 +13,10 @@ const int SCREEN_HEIGHT = 482;
 SDL_Window* window = NULL;
 SDL_Renderer* renderer = NULL;
 
+// Usage: ./LowLevelGame
 int main(int argc, char* args[]) {
+    cout << "Starting..." << endl;
+
     #pragma region Initialize SDL, window, renderer, etc.
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) != 0) {
         cout << "Error initializing SDL: " << SDL_GetError() << endl; return EXIT_FAILURE;
@@ -37,7 +40,6 @@ int main(int argc, char* args[]) {
     #pragma endregion
 
     const int region1 = SCREEN_WIDTH / 3, region2 = region1 * 2, region3 = SCREEN_WIDTH;
-    cout << "Region 1: " << region1 << " Region 2: " << region2 << " Region 3: " << region3 << endl;
 
     // Keep the window open until the user closes it (we will recieve a close event)
     SDL_Event e; bool shouldQuit = false;
@@ -75,7 +77,6 @@ int main(int argc, char* args[]) {
         else if (x < region1) r += r >= 255 ? 0 : 1;
         else if (x < region2) g += g >= 255 ? 0 : 1;
         else if (x < region3) b += b >= 255 ? 0 : 1;
-        cout << "r: " << r << " g: " << g << " b: " << b << endl;
         SDL_SetRenderDrawColor(renderer, r, g, b, 0xFF);
         // Draw a new line every render.
         for (int i = 1; i <= x; i++) {
