@@ -70,8 +70,7 @@ int main(int argc, char* args[]) {
 
     // TODO: Move exit tasks to their own Quit() function?
     cout << "Exiting..." << endl;
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-
+    SDL_DestroyRenderer(renderer); renderer = NULL;
+    SDL_DestroyWindow(window); window = NULL;
     SDL_Quit(); return EXIT_SUCCESS;
 }
