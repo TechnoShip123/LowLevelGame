@@ -14,9 +14,9 @@ An opportunity to do more with C++ by creating a game with SDL2. I just love cod
 
 ### 🍎 MacOS (Universal)
 
-- `brew install sdl2 sdl2_image` — Install libraries with brew.
+- `brew install sdl2 sdl2_image` — Install libraries with Homebrew.
 
-That's it! The [`Makefile`](./Makefile) is intended for M1 and Intel users by using both the `/opt/homebrew` and `/usr/local` homebrew paths, so this should work automagically.
+That's it! The [`Makefile`](./Makefile) is intended for M1 and Intel users by using both the `/opt/homebrew` and `/usr/local` Homebrew paths, so this should work automagically.
 
 ### 🪟 Windows
 
