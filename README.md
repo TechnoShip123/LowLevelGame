@@ -12,11 +12,11 @@ An opportunity to do more with C++ by creating a game with SDL2. I just love cod
 > 
 > Make sure to first setup the project with the `make setup` command.
 
-### 🍎 MacOS (M1 & Intel)
+### 🍎 MacOS (Universal)
 
 - `brew install sdl2 sdl2_image` — Install libraries with brew.
 
-That's it! The [`Makefile`](./Makefile) works for both Silicon and Intel users, using both the `/opt/homebrew` and `/usr/local` paths, so this will work out of the box.
+That's it! The [`Makefile`](./Makefile) is intended for M1 and Intel users by using both the `/opt/homebrew` and `/usr/local` homebrew paths, so this should work automagically.
 
 ### 🪟 Windows
 
