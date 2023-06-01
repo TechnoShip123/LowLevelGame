@@ -6,8 +6,8 @@ BUILD_DIR = build
 # OUTPUT = $(NAME).o
 OUTPUT = $(NAME)
 CC = clang++
-INCLUDE_PATH = -I/opt/homebrew/include
-LIBRARY_PATH = -L/opt/homebrew/lib
+INCLUDE_PATH = -I/opt/homebrew/include -I/usr/local/include
+LIBRARY_PATH = -L/opt/homebrew/lib -L/usr/local/lib
 # -l flags for linker, -v for verbose, -Og for optimization, -Wall for warnings
 CC_FLAGS = -v -g -Og -Wall -lSDL2 -lSDL2_image
 

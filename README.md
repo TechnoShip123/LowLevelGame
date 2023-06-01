@@ -12,19 +12,11 @@ An opportunity to do more with C++ by creating a game with SDL2. I just love cod
 > 
 > Make sure to first setup the project with the `make setup` command.
 
-### 🍎 MacOS 
-
-#### M1 / Apple Silicon
+### 🍎 MacOS (M1 & Intel)
 
 - `brew install sdl2 sdl2_image` — Install libraries with brew.
 
-That's it! The [`Makefile`](./Makefile) is intended for M1 users, using the `/opt/homebrew` path, so this will work out of the box.
-
-#### Intel
-
-Automatic support coming soon™️, will need to change homebrew path to `/usr/include` and etc.
-
-In the meantime, use the same steps as M1 but change the -L and -I paths to `/usr/include`
+That's it! The [`Makefile`](./Makefile) works for both Silicon and Intel users, using both the `/opt/homebrew` and `/usr/local` paths, so this will work out of the box.
 
 ### 🪟 Windows
 
