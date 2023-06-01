@@ -41,7 +41,7 @@ int main(int argc, char* args[]) {
     while (shouldQuit == false) {
         #pragma region Event Handling
         while (SDL_PollEvent(&e)) {
-            if (e.type == SDL_QUIT) shouldQuit = true;
+            if (e.type == SDL_QUIT || e.key.keysym.sym == SDLK_ESCAPE) shouldQuit = true;
         }
         #pragma endregion
 
